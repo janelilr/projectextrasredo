@@ -1,0 +1,415 @@
+body{
+    margin-top: 40px;
+    font-size: 125%;
+    font-family: 'Source Serif Pro',serif;
+}
+
+body.home {
+  background-image: url("../images/coconut_tree.png");
+  background-size: cover;
+}
+.flip-card {
+  background-color: transparent;
+  width: 400px;
+  height: 500px;
+}
+
+.flip-card-inner {
+  position: relative;
+  /* width: 300px;
+  height: 300px; */
+  width: 325%;
+  height: 75%;
+  /* text-align: center; */
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility:visible;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: relative;
+  width:  100%;
+  height: 75%;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+/* I used w3schools.com primarily for my code on lines 11-39. */
+
+.callout{
+  position:relative;
+  bottom: 5px;
+  right: 5px;
+  margin-right: 10px;
+  max-width: 300px;
+}
+
+.callout-header{
+  padding: 15px;
+  background: green;
+  font-size: 30px;
+  color: white;
+  border: 1px solid black;
+}
+
+.callout-container {
+  padding: 5px;
+  background-color: lightgrey;
+  color:black;
+  border: 1px solid black;
+}
+
+.closebtn{
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: white;
+  font-size: 30 px;
+  cursor: pointer;
+}
+/* I used w3schools.com primarily for my code on lines 42-72. */
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+/* I used w3schools.com primarily for my code on lines 75-83. */
+.accordion {
+  background-color: #008808;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  width: 50%;
+  border: 1px solid black;
+  text-align: center;
+  outline: none;
+  font-size: 24px;
+  transition: 0.4s;
+}
+
+.active,.accordion:hover{
+  background-color: #6eff42;
+}
+
+.panel{
+  padding: 10px;
+  display: none;
+  background-color: white
+  overflow: hidden;
+}
+/* I used w3schools.com primarily for my code on lines 85-107. */
+/* above code for the three sections are for the accordion and used w3 w3schools */
+#main{
+  background: white;
+  text-align: center;
+}
+#footer{
+  background: white;
+  font-size: 75%;
+}
+
+a.skipcontent{
+  padding:5px;
+	text-decoration: none;
+	position: relative;
+    top: -80px;
+    transition: top ease-in 2s;
+}
+/*from Colleen's starter layout css*/
+
+a.skipcontent:focus{
+	background: white;
+	top: -20px;
+	border: 1px solid black;
+}
+/*from Colleen's starter layout css*/
+
+
+h1#FilipinoFood{
+          color: white;
+          padding-top: 15px;
+          padding-bottom: 15px;
+}
+
+/* h2#flip{
+    position: relative;
+    color: white;
+    font-size: 40px;
+} */
+
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%
+}
+/*Learned how to center images from w3schools.com*/
+
+.current{
+        text-transform: uppercase;
+        color: black;
+        border: 1px solid black;
+        background: white;
+}
+/*for each navigation section*/
+
+ nav a{
+  text-decoration: none;
+  color: black;
+}
+/*for the navigation label*/
+
+nav li{
+  /* background: #d0d0d0; */
+  background: #008808;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: black;
+  text-align: center;
+}
+
+ /* p{
+  padding-top: 15px;
+  padding-bottom: 15px;
+} */
+
+p{
+ padding-top: 0px;
+ padding-bottom: 10px;
+}
+
+ p.cite{
+  text-align: left;
+  font-size: 75%;
+}
+
+h1#FilipinoFood {
+    color: #008808;
+    background: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+h1{
+  text-align: center;
+  color: #008808;
+  font-size: 90px;
+  padding-top: 15px;
+}
+
+/* img{
+  width: 75%;
+  padding-bottom: 15px;
+} */
+img{
+  width: 75%;
+  padding-bottom: 5px;
+}
+
+.gallery img{
+    width: 100%;
+
+}
+.fruit img{
+  opacity: .75;
+}
+
+.fruit img:hover{
+  opacity: 1;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+p.footer{
+  font-size: 75%;
+}
+
+p.photocred{
+  font-size:75%;
+}
+
+p.main_p{
+  text-align: center;
+}
+
+div.grid-container-dishes{
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+       align-items: center;
+     }
+/*learned about align-items and justify-items from https://stackoverflow.com/questions/45536537/centering-in-css-grid*/
+.dishes{
+    font-size: 125%;
+}
+/* lines 264 to 275 for sweets */
+/* div.grid-container-sweets{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      align-items: center;
+} */
+span.bold{
+      color:#008808;
+}
+.sweets{
+  font-size: 125%;
+}
+
+.slideshow-container {
+  max-width: 400px;
+  position: relative;
+  margin: auto;
+}
+
+.numbertext{
+  color: #008808;
+  position: relative;
+}
+
+/* Caption text */
+.text {
+  color: #000000;
+  font-size: 30px;
+  padding: 8px 12px;
+  position: relative;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* I used w3schools.com primarily for my code on lines 275-329. */
+
+/* Default mobile look */
+@media screen and (min-width: 400px){
+  .gallery{
+      display:grid;
+      grid-template-columns: 1fr;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      height: 300px;
+      width: 500px;
+      height: 1000px;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      -webkit-backface-visibility:visible;
+     }
+/* I used w3schools.com primarily for my code on lines 338-346. */
+
+
+/*Tablet look */
+@media screen and (min-width: 778px){
+  nav li{
+    display: inline-block;
+    /* background: #d0d0d0; */
+    background: #008808;
+    width: 45%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: black;
+  }
+
+
+  .gallery{
+      grid-template-columns: 1fr 1fr;
+    }
+
+
+
+/*Large screen look*/
+@media screen and (min-width: 1200px){
+nav li{
+  width: 20%;
+}
+
+.gallery{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.flip-card-inner {
+  position: relative;
+  /* width: 300px;
+  height: 300px; */
+  width: 325%;
+  height: 75%;
+  /* text-align: center; */
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility:visible;
+}
+
+/* I used w3schools.com primarily for my code on lines 381-390. */
+
+
+/* @media (prefers-reduced-motion: reduce) {
+
+a.skipcontent{
+   -webkit-transition-property: none;
+   -moz-transition-property: none;
+   -o-transition-property: none;
+   transition-property: none;
+  }
+} */
+/*above media query(prefers-reduced-motion:reduce) from Canvas by Colleen*/
+iframe:focus {
+  outline: none;
+}
+
+iframe[seamless] {
+  display: block;
+}
+/* I used w3schools.com primarily for my code on lines 408-414. */

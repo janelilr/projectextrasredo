@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
+    <meta name = 'viewport' content = 'width=device-width,initial-scale=1'>
+    <title>Sweets</title>
+  </head>
+<body>
+  <a href="#main" class="skipcontent">skip to content</a>
+<header>
+  <div id="navbar"> <!-- I used W3schools.com primarily for my code in html line 14.-->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home Page</a></li>
+      <li><a href="dishes.html">Main Dishes</a></li>
+      <li class= "current"><a href="sweets.html">Sweets</a></li>
+      <li><a href="fruits.html">Fruits</a></li>
+    </ul>
+  </nav>
+  </div>
+    <h1>Sweets</h1>
+</header>
+<main id="main" class= sweets>
+    <button onclick="typeWriter()">Reveal the Sentence</button>
+
+    <p id="demo"></p>
+<!-- I used W3schools.com primarily for my code in html lines 27-29.  -->
+<!-- <div class="grid-container-sweets">
+    <img src="images/sweets_banana_cue.jpeg" alt="fried bananas on a stick"/>
+    <p class= "sweets"><span class="bold">Banana cue</span>: It is a plantain fried with brown sugar. It is placed on a skewer.</p>
+
+    <img src="images/sweets_bibingka.jpg" alt="a slice of binbingka on a plate"/>
+    <p class= "sweets"><span class="bold">Bibingka</span>: It is a sweet rice or cassava that is broiled a little bit in the oven.</p>
+
+    <img src="images/sweets_biko.JPG" alt="a whole biko on banana leaves"/>
+    <p class= "sweets"><span class="bold">Biko</span>: It is a sweet rice, brown sugar, coconut milk that is similar to bibingka, but it is not put in the oven.</p>
+
+    <img src="images/sweets_halohalo_mang.JPG" alt="halo halo from Chow King"/>
+    <p class= "sweets"><span class="bold">Halo Halo</span>: This name is translated to mix mix. You take shaved ice, evaporated milk, sugar, and topping and mix it together with a spoon.</p></div> -->
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+    <img src="images/sweets_banana_cue.jpeg" alt="fried bananas on a stick"/>
+      <div class="text"><span class="bold">Banana cue</span> is a plantain fried with brown sugar. It is placed on a skewer.</div>
+      <div class="numbertext">1 of 4</div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="images/sweets_bibingka.jpg" alt="a slice of binbingka on a plate"/>
+          <div class="text"><span class="bold">Binbingka</span> is a sweet rice or cassava that is broiled a little bit in the oven.</div>
+          <div class="numbertext">2 of 4</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/sweets_biko.JPG" alt="a whole biko on banana leaves"/>
+              <div class="text"><span class="bold">Biko</span> is a sweet rice, brown sugar, coconut milk that is similar to bibingka, but it is not put in the oven.</div>
+              <div class="numbertext">3 of 4</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/sweets_halohalo_mang.JPG" alt="halo halo from Chow King"/>
+                  <div class="text"><span class="bold">Halo halo</span> get its name is translated to mix mix. You take shaved ice, evaporated milk, sugar, and topping and mix it together with a spoon. </div>
+                  <div class="numbertext">4 of 4</div>
+                </div>
+
+                <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+
+    <!-- <p class="photocred"><span>Photo credits</span>: Banana Cue: wikimedia commons,
+       Bibingka: c.flessen on flickr, Halo Halo: my photo taken at Mang Inasal</p> -->
+<!-- I used W3schools.com primarily for my code in html lines 43-74.-->
+    <h2>Photo Credits</h2>
+    <button class= "accordion"><a href="#accordion">Banana Cue</button></a>
+    <div class="panel">
+      <p>wikimedia commons</p></div>
+
+    <button class= "accordion"><a href="#accordion">Bibingka</button></a>
+      <div class="panel">
+        <p>c. flessen on flickr</p></div>
+
+    <button class= "accordion"><a href="#accordion">Halo Halo</button></a>
+    <div class="panel">
+    <p>My photo taken at Mang Inasal</p></div>
+<!-- I used W3schools.com primarily for my code in html lines 78-89.-->
+
+       <script>
+        window.onscroll = function() {myFunction()};
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+// I used W3schools.com primarily for my code in html lines 93-104.
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+            });
+          }
+// I used w3schools.com primarily for my code in html lines 106-119.
+    var i = 0;
+    var txt = 'These are classic, Filipino desserts!';
+    var speed = 100;
+
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("demo").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+// I used W3schools.com primarily for my code in html lines 121-131.
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+// I used w3schools.com primarily for my code in html lines 133-158.
+// function myFunction(x){
+//   document.querySelector("#accordion").innerHTML=x;
+// }
+
+// document.querySelector("#accordion").addEventListener("click", myFunction);
+//
+// function myFunction(){
+//   document.querySelector("#accordion")= class
+// }
+
+        </script>
+</main>
+<footer>
+  <p class=footer>SI 539 Portfolio</p>
+</footer>
+</body>
+</html>
